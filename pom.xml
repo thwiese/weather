@@ -10,4 +10,22 @@
 
     <packaging>pom</packaging>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <scm>
+        <url>https://github.com/thwiese/weather</url>
+        <connection>scm:git:git://github.com/thwiese/weather.git</connection>
+        <developerConnection>scm:git:git://github.com/thwiese/weather.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>thwiese</id>
+            <name>Thomas Wiese</name>
+            <email>mail@thomaswiese.de</email>
+        </developer>
+    </developers>
+
 </project>
