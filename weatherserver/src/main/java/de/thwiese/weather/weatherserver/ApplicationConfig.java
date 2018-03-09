@@ -1,4 +1,4 @@
-package de.thwiese.weather.weatherserver.resource;
+package de.thwiese.weather.weatherserver;
 
 import org.glassfish.jersey.server.ResourceConfig;
 

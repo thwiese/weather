@@ -33,7 +33,7 @@
                         <port>8011</port>
                     </httpConnector>
                     <!--jettyXml>${project.basedir}/jetty-context.xml}</jettyXml-->
-                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
                     <!--contextHandlers implementation="org.eclipse.jetty.maven.plugin.JettyWebAppContext">
 
                     </contextHandlers-->
