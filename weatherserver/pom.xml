@@ -22,4 +22,25 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.8.v20171121</version>
+                <configuration>
+                    <httpConnector>
+                        <port>8011</port>
+                    </httpConnector>
+                    <!--jettyXml>${project.basedir}/jetty-context.xml}</jettyXml-->
+                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                    <!--contextHandlers implementation="org.eclipse.jetty.maven.plugin.JettyWebAppContext">
+
+                    </contextHandlers-->
+                    <war>${project.build.outputDirectory}/${project.build.finalName}</war>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
