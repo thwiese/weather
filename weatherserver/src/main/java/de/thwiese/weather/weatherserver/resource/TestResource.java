@@ -11,7 +11,7 @@ public class TestResource {
 
     @GET
     public String test() {
-        return "server is running ...  ";
+        return "\uD83D\uDE0E server is running ...  ";
     }
 
 }
