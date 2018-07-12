@@ -53,6 +53,20 @@ class TemperatureUnitTest {
     }
 
     @Test
+    void testSelfConversions() {
+        assertEquals(-4.6, CELSIUS.convert(CELSIUS, -4.6), DOUBLE_FUZZY);
+        assertEquals(-0.0, CELSIUS.convert(CELSIUS, -0.0), DOUBLE_FUZZY);
+        assertEquals(10.0, CELSIUS.convert(CELSIUS, 10.0), DOUBLE_FUZZY);
+        assertEquals(-4.6, FAHRENHEIT.convert(FAHRENHEIT, -4.6), DOUBLE_FUZZY);
+        assertEquals(-0.0, FAHRENHEIT.convert(FAHRENHEIT, -0.0), DOUBLE_FUZZY);
+        assertEquals(10.0, FAHRENHEIT.convert(FAHRENHEIT, 10.0), DOUBLE_FUZZY);
+        assertEquals(-4.6, KELVIN.convert(KELVIN, -4.6), DOUBLE_FUZZY);
+        assertEquals(-0.0, KELVIN.convert(KELVIN, -0.0), DOUBLE_FUZZY);
+        assertEquals(10.0, KELVIN.convert(KELVIN, 10.0), DOUBLE_FUZZY);
+
+    }
+
+    @Test
     void testUndefinedConversion() {
         assertThrows(IllegalArgumentException.class, () -> TEMPERATURE.convert(CELSIUS, 0.0));
     }

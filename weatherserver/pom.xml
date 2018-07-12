@@ -10,12 +10,18 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>weatherserver</artifactId>
+    <artifactId>weather-server</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <packaging>war</packaging>
 
     <dependencies>
+        <dependency>
+            <groupId>de.twiese</groupId>
+            <artifactId>wh2601</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -23,6 +29,11 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <dependency>

@@ -10,13 +10,13 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>weather-model</artifactId>
+    <artifactId>weather-supplier</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
-    <dependencies>
-
-    </dependencies>
+    <modules>
+        <module>wh2601</module>
+    </modules>
 
 </project>

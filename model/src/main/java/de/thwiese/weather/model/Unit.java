@@ -4,6 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.DoubleFunction;
 
+/**
+ * Enumeration of units for measurement values.
+ * Units are grouped to a top level unit type. E.g. Units for the top level unit
+ * temperature are Celsius, Kelvin, ...
+ * Each unit also contains conversion functions to calculate other units.
+ *
+ * @author Thomas Wiese
+ */
 public enum Unit {
 
     TEMPERATURE("T"),
@@ -43,6 +51,9 @@ public enum Unit {
     }
 
     public double convert(Unit unit, double value) {
+        if (this == unit) {
+            return value;
+        }
         if (!converterMap.containsKey(unit)) {
             throw new IllegalArgumentException("No converter found");
         }
